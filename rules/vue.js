@@ -16,7 +16,8 @@ export const vue = defineFlatConfig({
   },
   processor: VuePlugin.processors['.vue'],
   rules: {
-    ...VuePlugin.configs['vue3-essential'],
+    ...VuePlugin.configs.base.rules,
+    ...VuePlugin.configs['vue3-essential'].rules,
     'vue/html-indent': ON,
     'vue/html-end-tags': ON,
     'vue/html-self-closing': [ON, { html: { void: 'always' } }],
