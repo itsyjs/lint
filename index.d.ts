@@ -1,3 +1,10 @@
 import { FlatESLintConfigItem } from 'eslint-define-config'
 
-declare function itsy(): FlatESLintConfigItem[]
+export interface Options {
+  /** additional patterns to ignore when linting
+   * @default ['dist/*']
+   */
+  ignorePatterns: string[];
+}
+
+declare function itsy(options: Options): FlatESLintConfigItem[]

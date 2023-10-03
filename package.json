@@ -1,6 +1,6 @@
 {
   "name": "@itsy/lint",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "code formatting through eslint",
   "type": "module",
   "exports": "./index.js",
@@ -9,9 +9,6 @@
   },
   "main": "./index.js",
   "types": "./index.d.ts",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "license": "MIT",
   "devDependencies": {
     "eslint": "^8.50.0"
