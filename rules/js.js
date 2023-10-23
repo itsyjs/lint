@@ -24,7 +24,7 @@ export const js = defineFlatConfig({
     'style/func-call-spacing': ON,
     'style/function-call-argument-newline': [ON, 'consistent'],
     'style/implicit-arrow-linebreak': ON,
-    'style/indent': [ON, 2, { ignoredNodes: ['TemplateLiteral *'] }],
+    'style/indent': [ON, 2, { SwitchCase: 1, ignoredNodes: ['TemplateLiteral *'] }],
     'style/key-spacing': ON,
     'style/keyword-spacing': ON,
     'style/linebreak-style': ON,
