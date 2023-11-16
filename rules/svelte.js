@@ -2,7 +2,9 @@ import { defineFlatConfig } from 'eslint-define-config'
 import SvelteParser from 'svelte-eslint-parser'
 import SveltePlugin from 'eslint-plugin-svelte'
 
-export const vue = defineFlatConfig({
+const ON = 'error'
+
+export const svelte = defineFlatConfig({
   plugins: { svelte: SveltePlugin },
   files: ['**/*.svelte'],
   languageOptions: {
@@ -15,6 +17,11 @@ export const vue = defineFlatConfig({
   processor: SveltePlugin.processors.svelte,
   rules: {
     ...SveltePlugin.configs.recommended.rules,
-    ...SveltePlugin.configs.recommended.rules,
+    'svelte/indent': ON,
+    'svelte/html-closing-bracket-spacing': ON,
+    'svelte/html-quotes': ON,
+    'svelte/mustache-spacing': ON,
+    'svelte/shorthand-attribute': ON,
+    'svelte/shorthand-directive': ON
   }
 })

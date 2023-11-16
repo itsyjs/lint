@@ -1,6 +1,6 @@
 {
   "name": "@itsy/lint",
-  "version": "1.0.5",
+  "version": "1.0.8",
   "description": "code formatting through eslint",
   "type": "module",
   "exports": "./index.js",
@@ -11,12 +11,12 @@
   "types": "./index.d.ts",
   "license": "MIT",
   "devDependencies": {
-    "eslint": "^8.52.0"
+    "eslint": "^8.53.0"
   },
   "dependencies": {
-    "@stylistic/eslint-plugin": "^1.0.0",
+    "@stylistic/eslint-plugin": "^1.2.0",
     "eslint-define-config": "^1.24.1",
-    "eslint-plugin-jsdoc": "^46.8.2",
+    "eslint-plugin-jsdoc": "^46.9.0",
     "eslint-plugin-svelte": "^2.35.0",
     "eslint-plugin-vue": "^9.18.1",
     "svelte-eslint-parser": "^0.33.1",
