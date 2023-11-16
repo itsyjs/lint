@@ -18,6 +18,7 @@ export const svelte = defineFlatConfig({
   rules: {
     ...SveltePlugin.configs.recommended.rules,
     'svelte/indent': ON,
+    'svelte/indent': [ON, { indentScript: false }],
     'svelte/html-closing-bracket-spacing': ON,
     'svelte/html-quotes': ON,
     'svelte/mustache-spacing': ON,
