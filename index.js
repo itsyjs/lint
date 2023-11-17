@@ -1,7 +1,7 @@
 import { defineFlatConfig } from 'eslint-define-config'
-import * as rules from '#rules'
+import { getRules } from '#rules'
 
-export const itsy = ({ ignorePatterns = [] } = {}) => defineFlatConfig([
+export const itsy = async ({ ignorePatterns = [], modules = ['js'] } = {}) => defineFlatConfig([
   { ignores: ['dist/*', ...ignorePatterns] },
-  ...Object.values(rules)
+  ...(await getRules(modules))
 ])

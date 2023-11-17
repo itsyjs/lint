@@ -7,4 +7,4 @@ export interface Options {
   ignorePatterns: string[];
 }
 
-declare function itsy(options: Options): FlatESLintConfigItem[]
+declare function itsy(options: Options): Promise<FlatESLintConfigItem[]>
