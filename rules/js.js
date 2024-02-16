@@ -1,5 +1,6 @@
 import { defineFlatConfig } from 'eslint-define-config'
 import StylePlugin from '@stylistic/eslint-plugin'
+import globals from 'globals'
 
 const ecmaVersion = 2023
 const sourceType = 'module'
@@ -9,9 +10,14 @@ export const js = defineFlatConfig({
   plugins: { style: StylePlugin },
   languageOptions: {
     ecmaVersion, sourceType,
-    parserOptions: { ecmaVersion, sourceType }
+    parserOptions: { ecmaVersion, sourceType },
+    globals: {
+      ...globals.browser,
+      ...globals.nodeBuiltin
+    }
   },
   rules: {
+    'no-undef': [ON],
     'style/array-bracket-newline': [ON, 'consistent'],
     'style/array-bracket-spacing': ON,
     'style/array-element-newline': [ON, 'consistent'],
