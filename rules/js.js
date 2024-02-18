@@ -13,7 +13,8 @@ export const js = defineFlatConfig({
     parserOptions: { ecmaVersion, sourceType },
     globals: {
       ...globals.browser,
-      ...globals.nodeBuiltin
+      ...globals.es2021,
+      ...globals.nodeBuiltin,
     }
   },
   rules: {
