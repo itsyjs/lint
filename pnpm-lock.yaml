@@ -29,9 +29,6 @@ importers:
       svelte-eslint-parser:
         specifier: ^1.0.1
         version: 1.0.1
-      vue-eslint-parser:
-        specifier: ^10.1.1
-        version: 10.1.1(eslint@9.22.0)
     devDependencies:
       eslint:
         specifier: ^9.22.0
