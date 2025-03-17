@@ -1,9 +1,9 @@
 import JsdocPlugin from 'eslint-plugin-jsdoc'
-import { defineFlatConfig } from 'eslint-define-config'
+import { defineConfig } from 'eslint/config'
 
 const ON = 'warn'
 
-export const jsdoc = defineFlatConfig({
+export const jsdoc = defineConfig({
   plugins: { jsdoc: JsdocPlugin },
   settings: {
     jsdoc: {

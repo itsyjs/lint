@@ -1,10 +1,10 @@
-import { defineFlatConfig } from 'eslint-define-config'
 import SvelteParser from 'svelte-eslint-parser'
 import SveltePlugin from 'eslint-plugin-svelte'
+import { defineConfig } from 'eslint/config'
 
 const ON = 'error'
 
-export const svelte = defineFlatConfig({
+export const svelte = defineConfig({
   plugins: { svelte: SveltePlugin },
   files: ['**/*.svelte'],
   languageOptions: {

@@ -1,12 +1,18 @@
-import { defineFlatConfig } from 'eslint-define-config'
 import StylePlugin from '@stylistic/eslint-plugin'
 import globals from 'globals'
+import TSParser from '@typescript-eslint/parser'
+import { defu } from 'defu'
+import { defineConfig } from 'eslint/config'
 
 const ecmaVersion = 2023
 const sourceType = 'module'
 const ON = 'error'
 
-export const js = defineFlatConfig({
+function mergeWithDefaults(overrides) {
+  return defu(overrides, root)
+}
+
+const root = defineConfig({
   plugins: { style: StylePlugin },
   languageOptions: {
     ecmaVersion, sourceType,
@@ -18,7 +24,6 @@ export const js = defineFlatConfig({
     }
   },
   rules: {
-    'no-undef': [ON],
     'style/array-bracket-newline': [ON, 'consistent'],
     'style/array-bracket-spacing': ON,
     'style/array-element-newline': [ON, 'consistent'],
@@ -51,3 +56,15 @@ export const js = defineFlatConfig({
     'style/spaced-comment': ON
   }
 })
+
+export const js = ([
+  mergeWithDefaults(defineConfig({
+    rules: {
+      'no-undef': [ON],
+    }
+  })),
+  mergeWithDefaults(defineConfig({
+    files: ['**/*.ts'],
+    languageOptions: { parser: TSParser },
+  }))
+])

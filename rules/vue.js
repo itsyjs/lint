@@ -1,9 +1,9 @@
-import { defineFlatConfig } from 'eslint-define-config'
 import VuePlugin from 'eslint-plugin-vue'
+import { defineConfig } from 'eslint/config'
 
 const ON = 'error'
 
-export const vue = defineFlatConfig([
+export const vue = defineConfig([
   ...VuePlugin.configs['flat/recommended'],
   {
     rules: {
