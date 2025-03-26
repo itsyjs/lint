@@ -1,10 +1,11 @@
 import SvelteParser from 'svelte-eslint-parser'
 import SveltePlugin from 'eslint-plugin-svelte'
 import { defineConfig } from 'eslint/config'
+import { mergeWithCore } from './core.js'
 
 const ON = 'error'
 
-export const svelte = defineConfig({
+export const svelte = mergeWithCore(defineConfig({
   plugins: { svelte: SveltePlugin },
   files: ['**/*.svelte'],
   languageOptions: {
@@ -25,4 +26,4 @@ export const svelte = defineConfig({
     'svelte/shorthand-attribute': ON,
     'svelte/shorthand-directive': ON
   }
-})
+}))

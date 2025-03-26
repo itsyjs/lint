@@ -1,9 +1,10 @@
 {
   "name": "@itsy/lint",
-  "version": "1.0.21",
+  "version": "1.0.22",
   "description": "code formatting through eslint",
   "type": "module",
   "exports": "./index.js",
+  "types": "./index.d.ts",
   "imports": {
     "#rules": "./rules/index.js"
   },

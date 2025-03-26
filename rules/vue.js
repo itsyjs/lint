@@ -1,11 +1,12 @@
 import VuePlugin from 'eslint-plugin-vue'
 import { defineConfig } from 'eslint/config'
+import { mergeWithCore } from './core.js'
 
 const ON = 'error'
 
 export const vue = defineConfig([
   ...VuePlugin.configs['flat/recommended'],
-  {
+  mergeWithCore({
     rules: {
       'vue/html-indent': ON,
       'vue/html-end-tags': ON,
@@ -18,5 +19,5 @@ export const vue = defineConfig([
       'vue/multi-word-component-names': ON,
       'vue/require-default-prop': 'off'
     }
-  }
+  })
 ])
