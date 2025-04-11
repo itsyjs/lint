@@ -7,8 +7,11 @@ const ecmaVersion = 2023
 const sourceType = 'module'
 const ON = 'error'
 
+const getConfigFromDefinedConfigArray = dc => Array.isArray(dc) ? dc.at(0) : dc
 export function mergeWithCore(overrides) {
-  return defu(overrides, root)
+  const rootConfig = getConfigFromDefinedConfigArray(root)
+  const overrideConfig = getConfigFromDefinedConfigArray(overrides)
+  return defu(overrideConfig, rootConfig)
 }
 
 const root = defineConfig({
@@ -35,7 +38,6 @@ const root = defineConfig({
     'style/func-call-spacing': ON,
     'style/function-call-argument-newline': [ON, 'consistent'],
     'style/implicit-arrow-linebreak': ON,
-    'style/indent': [ON, 2, { SwitchCase: 1, ignoredNodes: ['TemplateLiteral *'] }],
     'style/key-spacing': ON,
     'style/keyword-spacing': ON,
     'style/linebreak-style': ON,
