@@ -16,8 +16,9 @@ export const vue = defineConfig([
       'vue/html-quotes': ON,
       'vue/no-spaces-around-equal-signs-in-attribute': ON,
       'vue/no-multi-spaces': ON,
-      'vue/multi-word-component-names': ON,
-      'vue/require-default-prop': 'off'
+      'vue/multi-word-component-names': 'off',
+      'vue/require-default-prop': 'off',
+      'vue/valid-v-slot': 'off',
     }
   })
 ])
