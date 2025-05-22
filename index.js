@@ -1,6 +1,7 @@
 import { getRules } from '#rules'
 
-export const itsy = async ({ ignorePatterns = [], modules = ['js'] } = {}) => ([
+export const itsy = async ({ ignorePatterns = [], modules = ['js'], extend = [] } = {}) => ([
   { ignores: ['dist/*', ...ignorePatterns] },
-  ...(await getRules(modules))
+  ...(await getRules(modules)),
+  ...extend,
 ])
