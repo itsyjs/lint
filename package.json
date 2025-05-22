@@ -1,6 +1,6 @@
 {
   "name": "@itsy/lint",
-  "version": "1.0.25",
+  "version": "1.0.26",
   "description": "code formatting through eslint",
   "type": "module",
   "exports": "./index.js",
