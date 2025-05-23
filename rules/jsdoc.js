@@ -5,6 +5,7 @@ const ON = 'warn'
 
 export const jsdoc = defineConfig({
   plugins: { jsdoc: JsdocPlugin },
+  ignores: ['**/*.json'], // we aren't defining 'files', so need to instead say what we can't parse
   settings: {
     jsdoc: {
       tagNamePreference: {
