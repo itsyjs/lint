@@ -19,6 +19,10 @@ export const vue = defineConfig([
       'vue/multi-word-component-names': 'off',
       'vue/require-default-prop': 'off',
       'vue/valid-v-slot': 'off',
+      'vue/max-attributes-per-line': [ON, {
+        singleline: 3,
+        multiline: 1
+      }]
     }
   })
 ])
