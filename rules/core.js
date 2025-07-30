@@ -35,7 +35,7 @@ const root = defineConfig({
     'style/comma-dangle': [ON, 'always-multiline'],
     'style/comma-spacing': ON,
     'style/computed-property-spacing': ON,
-    'style/func-call-spacing': ON,
+    'style/function-call-spacing': ON,
     'style/function-call-argument-newline': [ON, 'consistent'],
     'style/implicit-arrow-linebreak': ON,
     'style/key-spacing': ON,
